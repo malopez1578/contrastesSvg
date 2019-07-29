@@ -38,8 +38,8 @@
             </label> -->
         </div>
         <div class="controls">
-            <label> Seleccione su tema</label>
-            <select name="" id="changeTheme">
+            <label> Seleccione su tema</label> <br>
+            <select class="selectStyle" name="" id="changeTheme">
                 <option value="0" selected> sin tema </option>
                 <option value="1">alto contraste</option>
                 <option value="2">escala de grises</option>
@@ -50,6 +50,19 @@
                 <option value="7">amarillo sobre azul</option>
                 <option value="8">blanco sobre negro</option>
             </select>
+            <br>
+            <label>Escoje tu tamaño de fuente</label>
+
+            <label class="contButton" for="tamano1">
+                <button class="changeSize" id="tamano1" data="0">tamaño 1</button>
+            </label>
+            <label class="contButton" for="tamano2">
+                <button class="changeSize" id="tamano2" data="1">tamaño 2</button>
+            </label>
+            <label class="contButton" for="tamano3">
+                <button class="changeSize" id="tamano3" data="2">tamaño 3</button>
+            </label>
+
             <!-- <label class="contButton" for="tono">
                 <button id="theme-scaleGray">theme-scaleGray</button>
             </label>
@@ -247,7 +260,6 @@
             </defs>
         </svg></span>
     <script src="filter.js"></script>
-    <!-- <script src="main.js"></script> -->
 </body>
 
 </html>

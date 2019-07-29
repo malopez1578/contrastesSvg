@@ -4,11 +4,19 @@
   --color_3: hsl(288, 63%, 20%);
   --color_fondo: hsl(0, 0%, 100%);
   --color_text: hsl(0, 0%, 0%);
-  --color_text-white: hsl(0, 0%, 100%); }
+  --color_text-white: hsl(0, 0%, 100%);
+  --font_size: 14px; }
 
 html {
   background: var(--color_fondo);
-  color: var(--color_text); }
+  color: var(--color_text);
+  font-size: var(--font_size); }
+
+.selectStyle {
+  font-size: 1rem; }
+
+.changeSize {
+  font-size: 1rem; }
 
 body {
   background: inherit;
@@ -124,9 +132,8 @@ body {
   -webkit-transition: background .5s ease;
   -o-transition: background .5s ease;
   transition: background .5s ease; }
-
-.contButton button:hover {
-  background-color: var(--color_2); }
+  .contButton button button:hover {
+    background-color: var(--color_2); }
 
 .contRange span {
   width: 100%;
@@ -135,111 +142,103 @@ body {
 html[hc="a1"] {
   -webkit-filter: url("#hc_extension_highcontrast");
   filter: url("#hc_extension_highcontrast"); }
-
-html[hcx="1"] img[src*="jpg"],
-html[hcx="1"] img[src*="jpeg"],
-html[hcx="1"] img.rg_i,
-html[hcx="1"] svg image,
-html[hcx="1"] embed,
-html[hcx="1"] object,
-html[hcx="1"] video {
-  -webkit-filter: url("#hc_extension_highcontrast_back");
-  filter: url("#hc_extension_highcontrast_back"); }
+  html[hc="a1"] img[src*="jpg"],
+  html[hc="a1"] img[src*="jpeg"],
+  html[hc="a1"] img.rg_i,
+  html[hc="a1"] svg image,
+  html[hc="a1"] embed,
+  html[hc="a1"] object,
+  html[hc="a1"] video {
+    -webkit-filter: url("#hc_extension_highcontrast_back");
+    filter: url("#hc_extension_highcontrast_back"); }
 
 html[hc="a2"] {
   -webkit-filter: url("#hc_extension_grayscale");
   filter: url("#hc_extension_grayscale"); }
-
-html[hcx="2"] img[src*="jpg"],
-html[hcx="2"] img[src*="jpeg"],
-html[hcx="2"] img.rg_i,
-html[hcx="2"] svg image,
-html[hcx="2"] embed,
-html[hcx="2"] object,
-html[hcx="2"] video {
-  -webkit-filter: url("#hc_extension_grayscale_back");
-  filter: url("#hc_extension_grayscale_back"); }
+  html[hc="a2"] img[src*="jpg"],
+  html[hc="a2"] img[src*="jpeg"],
+  html[hc="a2"] img.rg_i,
+  html[hc="a2"] svg image,
+  html[hc="a2"] embed,
+  html[hc="a2"] object,
+  html[hc="a2"] video {
+    -webkit-filter: url("#hc_extension_grayscale_back");
+    filter: url("#hc_extension_grayscale_back"); }
 
 html[hc="a3"] {
   -webkit-filter: url("#hc_extension_invert");
   filter: url("#hc_extension_invert"); }
-
-html[hcx="3"] img[src*="jpg"],
-html[hcx="3"] img[src*="jpeg"],
-html[hcx="3"] img.rg_i,
-html[hcx="3"] svg image,
-html[hcx="3"] embed,
-html[hcx="3"] object,
-html[hcx="3"] video {
-  -webkit-filter: url("#hc_extension_invert_back");
-  filter: url("#hc_extension_invert_back"); }
+  html[hc="a3"] img[src*="jpg"],
+  html[hc="a3"] img[src*="jpeg"],
+  html[hc="a3"] img.rg_i,
+  html[hc="a3"] svg image,
+  html[hc="a3"] embed,
+  html[hc="a3"] object,
+  html[hc="a3"] video {
+    -webkit-filter: url("#hc_extension_invert_back");
+    filter: url("#hc_extension_invert_back"); }
 
 html[hc="a4"] {
   -webkit-filter: url("#hc_extension_yellow_on_black");
   filter: url("#hc_extension_yellow_on_black"); }
-
-html[hcx="4"] img[src*="jpg"],
-html[hcx="4"] img[src*="jpeg"],
-html[hcx="4"] img.rg_i,
-html[hcx="4"] svg image,
-html[hcx="4"] embed,
-html[hcx="4"] object,
-html[hcx="4"] video {
-  -webkit-filter: url("#hc_extension_yellow_on_black_back");
-  filter: url("#hc_extension_yellow_on_black_back"); }
+  html[hc="a4"] img[src*="jpg"],
+  html[hc="a4"] img[src*="jpeg"],
+  html[hc="a4"] img.rg_i,
+  html[hc="a4"] svg image,
+  html[hc="a4"] embed,
+  html[hc="a4"] object,
+  html[hc="a4"] video {
+    -webkit-filter: url("#hc_extension_yellow_on_black_back");
+    filter: url("#hc_extension_yellow_on_black_back"); }
 
 html[hc="a5"] {
   -webkit-filter: url("#hc_extension_red_on_white");
   filter: url("#hc_extension_red_on_white"); }
-
-html[hcx="5"] img[src*="jpg"],
-html[hcx="5"] img[src*="jpeg"],
-html[hcx="5"] img.rg_i,
-html[hcx="5"] svg image,
-html[hcx="5"] embed,
-html[hcx="5"] object,
-html[hcx="5"] video {
-  -webkit-filter: url("#hc_extension_red_on_white_back");
-  filter: url("#hc_extension_red_on_white_back"); }
+  html[hc="a5"] img[src*="jpg"],
+  html[hc="a5"] img[src*="jpeg"],
+  html[hc="a5"] img.rg_i,
+  html[hc="a5"] svg image,
+  html[hc="a5"] embed,
+  html[hc="a5"] object,
+  html[hc="a5"] video {
+    -webkit-filter: url("#hc_extension_red_on_white_back");
+    filter: url("#hc_extension_red_on_white_back"); }
 
 html[hc="a6"] {
   -webkit-filter: url("#hc_extension_green_on_blue");
   filter: url("#hc_extension_green_on_blue"); }
-
-html[hcx="6"] img[src*="jpg"],
-html[hcx="6"] img[src*="jpeg"],
-html[hcx="6"] img.rg_i,
-html[hcx="6"] svg image,
-html[hcx="6"] embed,
-html[hcx="6"] object,
-html[hcx="6"] video {
-  -webkit-filter: url("#hc_extension_green_on_blue_back");
-  filter: url("#hc_extension_green_on_blue_back"); }
+  html[hc="a6"] img[src*="jpg"],
+  html[hc="a6"] img[src*="jpeg"],
+  html[hc="a6"] img.rg_i,
+  html[hc="a6"] svg image,
+  html[hc="a6"] embed,
+  html[hc="a6"] object,
+  html[hc="a6"] video {
+    -webkit-filter: url("#hc_extension_green_on_blue_back");
+    filter: url("#hc_extension_green_on_blue_back"); }
 
 html[hc="a7"] {
   -webkit-filter: url("#hc_extension_yellow_on_blue");
   filter: url("#hc_extension_yellow_on_blue"); }
-
-html[hcx="7"] img[src*="jpg"],
-html[hcx="7"] img[src*="jpeg"],
-html[hcx="7"] img.rg_i,
-html[hcx="7"] svg image,
-html[hcx="7"] embed,
-html[hcx="7"] object,
-html[hcx="7"] video {
-  -webkit-filter: url("#hc_extension_yellow_on_blue_back");
-  filter: url("#hc_extension_yellow_on_blue_back"); }
+  html[hc="a7"] img[src*="jpg"],
+  html[hc="a7"] img[src*="jpeg"],
+  html[hc="a7"] img.rg_i,
+  html[hc="a7"] svg image,
+  html[hc="a7"] embed,
+  html[hc="a7"] object,
+  html[hc="a7"] video {
+    -webkit-filter: url("#hc_extension_yellow_on_blue_back");
+    filter: url("#hc_extension_yellow_on_blue_back"); }
 
 html[hc="a8"] {
   -webkit-filter: url("#hc_extension_white_on_black");
   filter: url("#hc_extension_white_on_black"); }
-
-html[hcx="8"] img[src*="jpg"],
-html[hcx="8"] img[src*="jpeg"],
-html[hcx="8"] img.rg_i,
-html[hcx="8"] svg image,
-html[hcx="8"] embed,
-html[hcx="8"] object,
-html[hcx="8"] video {
-  -webkit-filter: url("#hc_extension_white_on_black_back");
-  filter: url("#hc_extension_white_on_black_back"); }
+  html[hc="a8"] img[src*="jpg"],
+  html[hc="a8"] img[src*="jpeg"],
+  html[hc="a8"] img.rg_i,
+  html[hc="a8"] svg image,
+  html[hc="a8"] embed,
+  html[hc="a8"] object,
+  html[hc="a8"] video {
+    -webkit-filter: url("#hc_extension_white_on_black_back");
+    filter: url("#hc_extension_white_on_black_back"); }

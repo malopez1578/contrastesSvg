@@ -5,12 +5,19 @@
     --color_fondo: hsl(0, 0%, 100%);
     --color_text: hsl(0, 0%, 0%);
     --color_text-white: hsl(0, 0%, 100%);
+    --font_size: 14px;
 }
 html{
     background: var(--color_fondo);
-    color: var(--color_text)
+    color: var(--color_text);
+    font-size: var(--font_size);
 }
-
+.selectStyle {
+    font-size: 1rem;
+}
+.changeSize{
+    font-size: 1rem;
+}
 body{
     background: inherit;
     margin: 0;
@@ -89,11 +96,11 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: background .5s ease;
+    & button:hover{
+        background-color: var(--color_2);
+    }
 }
 
-.contButton button:hover{
-    background-color: var(--color_2);
-}
 .contRange span{
     width: 100%;
     text-align: center;
@@ -101,115 +108,114 @@ body{
 
 html[hc="a1"] {
 	filter: url("#hc_extension_highcontrast");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video {
+       filter: url("#hc_extension_highcontrast_back");
+    }
 }
 
-html[hcx="1"] img[src*="jpg"],
-html[hcx="1"] img[src*="jpeg"],
-html[hcx="1"] img.rg_i,
-html[hcx="1"] svg image,
-html[hcx="1"] embed,
-html[hcx="1"] object,
-html[hcx="1"] video {
-	filter: url("#hc_extension_highcontrast_back");
-}
 
 html[hc="a2"] {
 	filter: url("#hc_extension_grayscale");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video {
+        filter: url("#hc_extension_grayscale_back");
+    }
 }
 
-html[hcx="2"] img[src*="jpg"],
-html[hcx="2"] img[src*="jpeg"],
-html[hcx="2"] img.rg_i,
-html[hcx="2"] svg image,
-html[hcx="2"] embed,
-html[hcx="2"] object,
-html[hcx="2"] video {
-	filter: url("#hc_extension_grayscale_back");
-}
 
 html[hc="a3"] {
 	filter: url("#hc_extension_invert");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video {
+        filter: url("#hc_extension_invert_back");
+    }
 }
 
-html[hcx="3"] img[src*="jpg"],
-html[hcx="3"] img[src*="jpeg"],
-html[hcx="3"] img.rg_i,
-html[hcx="3"] svg image,
-html[hcx="3"] embed,
-html[hcx="3"] object,
-html[hcx="3"] video {
-	filter: url("#hc_extension_invert_back");
-}
 
 
 html[hc="a4"] {
 	filter: url("#hc_extension_yellow_on_black");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video {
+        filter: url("#hc_extension_yellow_on_black_back");
+    }
 }
 
-html[hcx="4"] img[src*="jpg"],
-html[hcx="4"] img[src*="jpeg"],
-html[hcx="4"] img.rg_i,
-html[hcx="4"] svg image,
-html[hcx="4"] embed,
-html[hcx="4"] object,
-html[hcx="4"] video {
-	filter: url("#hc_extension_yellow_on_black_back");
-}
 
 html[hc="a5"] {
 	filter: url("#hc_extension_red_on_white");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video
+    {
+        filter: url("#hc_extension_red_on_white_back");
+    }
 }
 
-html[hcx="5"] img[src*="jpg"],
-html[hcx="5"] img[src*="jpeg"],
-html[hcx="5"] img.rg_i,
-html[hcx="5"] svg image,
-html[hcx="5"] embed,
-html[hcx="5"] object,
-html[hcx="5"] video
-{
-	filter: url("#hc_extension_red_on_white_back");
-}
 
 html[hc="a6"] {
 	filter: url("#hc_extension_green_on_blue");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video
+    {
+        filter: url("#hc_extension_green_on_blue_back");
+    }
 }
 
-html[hcx="6"] img[src*="jpg"],
-html[hcx="6"] img[src*="jpeg"],
-html[hcx="6"] img.rg_i,
-html[hcx="6"] svg image,
-html[hcx="6"] embed,
-html[hcx="6"] object,
-html[hcx="6"] video
-{
-	filter: url("#hc_extension_green_on_blue_back");
-}
 html[hc="a7"] {
 	filter: url("#hc_extension_yellow_on_blue");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video
+    {
+        filter: url("#hc_extension_yellow_on_blue_back");
+    }
 }
 
-html[hcx="7"] img[src*="jpg"],
-html[hcx="7"] img[src*="jpeg"],
-html[hcx="7"] img.rg_i,
-html[hcx="7"] svg image,
-html[hcx="7"] embed,
-html[hcx="7"] object,
-html[hcx="7"] video
-{
-	filter: url("#hc_extension_yellow_on_blue_back");
-}
 html[hc="a8"] {
-	filter: url("#hc_extension_white_on_black");
-}
-
-html[hcx="8"] img[src*="jpg"],
-html[hcx="8"] img[src*="jpeg"],
-html[hcx="8"] img.rg_i,
-html[hcx="8"] svg image,
-html[hcx="8"] embed,
-html[hcx="8"] object,
-html[hcx="8"] video
-{
-	filter: url("#hc_extension_white_on_black_back");
+    filter: url("#hc_extension_white_on_black");
+    & img[src*="jpg"],
+    & img[src*="jpeg"],
+    & img.rg_i,
+    & svg image,
+    & embed,
+    & object,
+    & video
+    {
+        filter: url("#hc_extension_white_on_black_back");
+    }
 }
