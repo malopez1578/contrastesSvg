@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=10">
+    <title>Theme with Js</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="img_1.png" alt="soy una imgen de ejemplo">
+        </div>
+        <div class="item">2</div>
+        <div class="item">
+            <video src="video.mp4" controls></video>
+        </div>
+    </div>
+    <div class="contaiter-flex">
+        <div class="controls">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam provident fugiat consequuntur aperiam rerum, deleniti quas asperiores itaque repudiandae quae velit molestias, suscipit voluptatum? Exercitationem ea labore architecto a ipsam!</p>
+            <!-- <label class="contRange" for="tono">
+                <span>tono</span>
+                <input type="range" name="tono" id="tono">
+            </label>
+            <label class="contRange" for="saturacion">
+                <span>saturacion</span>
+                <input type="range" name="saturacion" id="saturacion" step="0.1" max="10">
+            </label>
+            <label class="contRange" for="luminosidad">
+                <span>luminosidad</span>
+                <input type="range" name="luminosidad" id="luminosidad" step="0.1" max="10">
+            </label> -->
+        </div>
+        <div class="controls">
+            <label> Seleccione su tema</label>
+            <select name="" id="changeTheme">
+                <option value="0" selected> sin tema </option>
+                <option value="1">alto contraste</option>
+                <option value="2">escala de grises</option>
+                <option value="3">invertir colores</option>
+                <option value="4">amarrillo sobre negro</option>
+                <option value="5">blanco sobre rojo</option>
+            </select>
+            <!-- <label class="contButton" for="tono">
+                <button id="theme-scaleGray">theme-scaleGray</button>
+            </label>
+            <label class="contButton" for="saturacion">
+                <button id="theme-sepia">theme-Sepia</button>
+            </label>
+            <label class="contButton" for="luminosidad">
+                <button id="theme-invertir">theme-invertir</button>
+            </label>
+            <label class="contButton" for="contrast">
+                <button id="theme-contrast">theme-contrast</button>
+            </label> -->
+        </div>
+    </div>
+    <span id="hc_extension_svg_filters"><svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_off">
+                    <feComponentTransfer>
+                        <feFuncR type="table" tableValues="0 1"></feFuncR>
+                        <feFuncG type="table" tableValues="0 1"></feFuncG>
+                        <feFuncB type="table" tableValues="0 1"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast">
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="3.0"></feFuncR>
+                        <feFuncG type="gamma" exponent="3.0"></feFuncG>
+                        <feFuncB type="gamma" exponent="3.0"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_highcontrast_back">
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="0.33"></feFuncR>
+                        <feFuncG type="gamma" exponent="0.33"></feFuncG>
+                        <feFuncB type="gamma" exponent="0.33"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale">
+                    <feColorMatrix type="matrix"
+                        values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0">
+                    </feColorMatrix>
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="3"></feFuncR>
+                        <feFuncG type="gamma" exponent="3"></feFuncG>
+                        <feFuncB type="gamma" exponent="3"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_grayscale_back">
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="0.33"></feFuncR>
+                        <feFuncG type="gamma" exponent="0.33"></feFuncG>
+                        <feFuncB type="gamma" exponent="0.33"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert">
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncR>
+                        <feFuncG type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncG>
+                        <feFuncB type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_invert_back">
+                    <feComponentTransfer>
+                        <feFuncR type="table" tableValues="1 0"></feFuncR>
+                        <feFuncG type="table" tableValues="1 0"></feFuncG>
+                        <feFuncB type="table" tableValues="1 0"></feFuncB>
+                    </feComponentTransfer>
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="1.7"></feFuncR>
+                        <feFuncG type="gamma" exponent="1.7"></feFuncG>
+                        <feFuncB type="gamma" exponent="1.7"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black">
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncR>
+                        <feFuncG type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncG>
+                        <feFuncB type="gamma" amplitude="-1" exponent="3" offset="1"></feFuncB>
+                    </feComponentTransfer>
+                    <feColorMatrix type="matrix" values="0.3 0.5 0.2 0 0 0.3 0.5 0.2 0 0 0 0 0 0 0 0 0 0 1 0">
+                    </feColorMatrix>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_yellow_on_black_back">
+                    <feComponentTransfer>
+                        <feFuncR type="table" tableValues="1 0"></feFuncR>
+                        <feFuncG type="table" tableValues="1 0"></feFuncG>
+                        <feFuncB type="table" tableValues="1 0"></feFuncB>
+                    </feComponentTransfer>
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" exponent="0.33"></feFuncR>
+                        <feFuncG type="gamma" exponent="0.33"></feFuncG>
+                        <feFuncB type="gamma" exponent="0.33"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_red_on_white"
+                    filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feColorMatrix type="matrix" 
+                    values="
+                        .33 .33 .33 0 0
+                        .33 .33 .33 0 0
+                        .33 .33 .33 0 0
+                        0 0 0 1 0" 
+                        in="SourceGraphic" result="colormatrix" />
+                    <feComponentTransfer in="colormatrix" result="componentTransfer">
+                        <feFuncR type="table" tableValues="0.97 0.52"/>
+                        <feFuncG type="table" tableValues="1 0.03"/>
+                        <feFuncB type="table" tableValues="0.98 0.06"/>
+                        <feFuncA type="table" tableValues="0 1"/>
+                    </feComponentTransfer>
+                    <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend" />
+
+                </filter>
+                <filter x="0" y="0" width="99999" height="99999" id="hc_extension_red_on_white_back">
+                    <feComponentTransfer>
+                        <feFuncR type="table" tableValues="1 0"></feFuncR>
+                        <feFuncG type="table" tableValues="0 0"></feFuncG>
+                        <feFuncB type="table" tableValues="0 0"></feFuncB>
+                    </feComponentTransfer>
+                    <feComponentTransfer>
+                        <feFuncR type="gamma" amplitude="-1" exponent="5" offset="1"></feFuncR>
+                        <feFuncG type="gamma" amplitude="-1" exponent="5" offset="1"></feFuncG>
+                        <feFuncB type="gamma" amplitude="-1" exponent="5" offset="1"></feFuncB>
+                    </feComponentTransfer>
+                </filter>
+            </defs>
+        </svg></span>
+    <script src="filter.js"></script>
+    <!-- <script src="main.js"></script> -->
+</body>
+
+</html>
